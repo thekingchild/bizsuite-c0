@@ -1,96 +1,46 @@
-import { changelogEntries } from "./changelog-data.js";
-
+// Release entries are written in changelog.html so they work without JavaScript.
+// This script turns the version list into tabs that show one release at a time.
 const listRoot = document.querySelector("[data-changelog-list]");
 const panelRoot = document.querySelector("[data-changelog-panels]");
-const summaryRoot = document.querySelector("[data-changelog-summary]");
-const emptyState = "No notes were published for this version in the current BizSuite changelog archive.";
 
-if (listRoot && panelRoot && summaryRoot) {
-  const sectionOrder = ["added", "updated", "fixed", "notes"];
-  const sectionTitles = {
-    added: "Added",
-    updated: "Updated",
-    fixed: "Fixed",
-    notes: "Notes"
-  };
+if (listRoot && panelRoot) {
+  const links = [...listRoot.querySelectorAll(".changelog-nav-item")];
+  const entries = [...panelRoot.querySelectorAll(".changelog-entry")];
+  const versions = entries.map((entry) => entry.dataset.version);
 
-  listRoot.innerHTML = "";
-  panelRoot.innerHTML = "";
-  summaryRoot.textContent = `${changelogEntries.length} releases mirrored from the current BizSuite changelog archive.`;
-
-  changelogEntries.forEach((entry, index) => {
-    const itemButton = document.createElement("button");
-    itemButton.type = "button";
-    itemButton.className = "changelog-nav-item";
-    itemButton.dataset.version = entry.version;
-    itemButton.setAttribute("aria-selected", String(index === 0));
-    itemButton.innerHTML = `
-      <strong>v${entry.version}</strong>
-      <span>${entry.label}</span>
-    `;
-    listRoot.appendChild(itemButton);
-
-    const article = document.createElement("article");
-    article.className = "changelog-entry";
-    article.dataset.version = entry.version;
-    article.hidden = index !== 0;
-
-    const sections = sectionOrder
-      .filter((key) => Array.isArray(entry[key]) && entry[key].length > 0)
-      .map((key) => {
-        const items = entry[key].map((item) => `<li>${item}</li>`).join("");
-        return `
-          <section class="changelog-group">
-            <h3>${sectionTitles[key]}</h3>
-            <ul>${items}</ul>
-          </section>
-        `;
-      })
-      .join("");
-
-    article.innerHTML = `
-      <div class="changelog-entry-head">
-        <div>
-          <p class="eyebrow">Version ${entry.version}</p>
-          <h2>${entry.label}</h2>
-        </div>
-        <span class="changelog-badge">${entry.version}</span>
-      </div>
-      <p class="changelog-entry-summary">${entry.summary}</p>
-      ${sections || `<p class="changelog-empty">${emptyState}</p>`}
-    `;
-    panelRoot.appendChild(article);
-  });
-
-  const setActiveVersion = (version) => {
-    listRoot.querySelectorAll(".changelog-nav-item").forEach((button) => {
-      const isActive = button.dataset.version === version;
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-selected", String(isActive));
+  const setActiveVersion = (version, updateHash = true) => {
+    links.forEach((link) => {
+      const isActive = link.dataset.version === version;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
 
-    panelRoot.querySelectorAll(".changelog-entry").forEach((entry) => {
+    entries.forEach((entry) => {
       entry.hidden = entry.dataset.version !== version;
     });
 
-    if (window.location.hash !== `#v-${version}`) {
+    if (updateHash && window.location.hash !== `#v-${version}`) {
       history.replaceState(null, "", `#v-${version}`);
     }
   };
 
   listRoot.addEventListener("click", (event) => {
-    const button = event.target.closest(".changelog-nav-item");
-    if (!button) {
-      return;
+    const link = event.target.closest(".changelog-nav-item");
+    if (!link) return;
+    event.preventDefault();
+    setActiveVersion(link.dataset.version);
+
+    // The version list is long; bring the release notes back into view if they scrolled off.
+    if (panelRoot.getBoundingClientRect().top < 0) {
+      const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      panelRoot.scrollIntoView({ behavior: smooth ? "smooth" : "auto", block: "start" });
     }
-    setActiveVersion(button.dataset.version);
   });
 
-  const initialVersion = window.location.hash.startsWith("#v-")
-    ? window.location.hash.replace("#v-", "")
-    : changelogEntries[0].version;
-  const activeExists = changelogEntries.some((entry) => entry.version === initialVersion);
-  setActiveVersion(activeExists ? initialVersion : changelogEntries[0].version);
-
-  window.applyBizSuiteReveal?.(document);
+  const fromHash = window.location.hash.replace("#v-", "");
+  setActiveVersion(versions.includes(fromHash) ? fromHash : versions[0], versions.includes(fromHash));
 }

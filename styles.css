@@ -1891,6 +1891,7 @@ details p {
 
 .changelog-panels {
   min-width: 0;
+  scroll-margin-top: 96px;
 }
 
 .changelog-entry {

@@ -101,20 +101,20 @@
       <section class="changelog-hero section-shell">
         <div class="changelog-hero-copy">
           <p class="eyebrow">Release history</p>
-          <h1>Changelog</h1>
+          <h1>BizSuite Changelog</h1>
           <p>
-            A dedicated release page for product updates, bug fixes, and incremental improvements,
-            mirrored from the latest BizSuite changelog archive and structured for future additions.
+            New features, improvements, and bug fixes in each BizSuite release, newest first.
+            Every update rolls out to all subscribers at no extra cost.
           </p>
         </div>
         <div class="changelog-hero-meta">
           <div>
-            <span>Source</span>
-            <strong>BizSuite changelog archive (PDF)</strong>
+            <span>Latest version</span>
+            <strong>v3.8</strong>
           </div>
           <div>
-            <span>Format</span>
-            <strong>Version-led, extendable data model</strong>
+            <span>Releases listed</span>
+            <strong>20 releases</strong>
           </div>
         </div>
       </section>
@@ -123,12 +123,766 @@
         <aside class="changelog-nav">
           <div class="changelog-nav-head">
             <p class="eyebrow">Versions</p>
-            <p data-changelog-summary></p>
+            <p data-changelog-summary>20 releases, newest first.</p>
           </div>
-          <div class="changelog-nav-list" data-changelog-list></div>
+          <nav class="changelog-nav-list" aria-label="Release versions" data-changelog-list>
+            <a class="changelog-nav-item" href="#v-3.8" data-version="3.8">
+              <strong>v3.8</strong>
+              <span>Latest release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.7" data-version="3.7">
+              <strong>v3.7</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.6" data-version="3.6">
+              <strong>v3.6</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.5" data-version="3.5">
+              <strong>v3.5</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.4" data-version="3.4">
+              <strong>v3.4</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.3" data-version="3.3">
+              <strong>v3.3</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.1" data-version="3.1">
+              <strong>v3.1</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.0.1" data-version="3.0.1">
+              <strong>v3.0.1</strong>
+              <span>Maintenance release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-3.0" data-version="3.0">
+              <strong>v3.0</strong>
+              <span>Major release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.8.5" data-version="2.8.5">
+              <strong>v2.8.5</strong>
+              <span>Previous release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.8" data-version="2.8">
+              <strong>v2.8</strong>
+              <span>Earlier release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.6" data-version="2.6">
+              <strong>v2.6</strong>
+              <span>Earlier release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.5.6" data-version="2.5.6">
+              <strong>v2.5.6</strong>
+              <span>Maintenance release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.5" data-version="2.5">
+              <strong>v2.5</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.4" data-version="2.4">
+              <strong>v2.4</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.2" data-version="2.2">
+              <strong>v2.2</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.1" data-version="2.1">
+              <strong>v2.1</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-2.0" data-version="2.0">
+              <strong>v2.0</strong>
+              <span>Feature release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-1.5" data-version="1.5">
+              <strong>v1.5</strong>
+              <span>Earlier release</span>
+            </a>
+            <a class="changelog-nav-item" href="#v-1.4" data-version="1.4">
+              <strong>v1.4</strong>
+              <span>Earlier release</span>
+            </a>
+          </nav>
         </aside>
 
-        <div class="changelog-panels" data-changelog-panels></div>
+        <div class="changelog-panels" data-changelog-panels>
+          <article class="changelog-entry" id="v-3.8" data-version="3.8">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.8</p>
+                <h2>Latest release</h2>
+              </div>
+              <span class="changelog-badge">3.8</span>
+            </div>
+            <p class="changelog-entry-summary">Due-payment approval, inventory defaults, POS fixes, and dark mode stability updates.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Approve due payments feature in Business Settings &gt; Payments.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Dark mode not loading after update for some users because of cache issues.</li>
+                <li>Swal not loading on action buttons after recent action dropdown improvements, including product delete flows.</li>
+                <li>Inventory management (manage stock) now enabled by default for all businesses when custom plans are not enabled.</li>
+                <li>Sales list loading issue when the add sale module is disabled.</li>
+                <li>Units and subunits selection on the POS row.</li>
+                <li>Price group changes clearing the cart on the POS screen.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.7" data-version="3.7">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.7</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.7</span>
+            </div>
+            <p class="changelog-entry-summary">Invoice layout builders, transaction safeguards on POS, inventory controls, and broader UI polish.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>CRN field on the customers page for ZATCA.</li>
+                <li>Builder templates for dynamic layouts on the invoice layouts page.</li>
+                <li>Payment method column on the product sell report.</li>
+                <li>Client transaction ID with strict duplication checks on the POS screen, returning the existing saved receipt instead of creating a duplicate invoice.</li>
+                <li>Inventory Management as an internal core module for the manage stock feature on the add product page.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Renamed the Due Date label to Pay Term across the application.</li>
+                <li>Overall UI improvements across modules.</li>
+                <li>Action dropdown menus on scroll-heavy pages now open upward or downward based on available space.</li>
+                <li>Orders auto-refresh now refreshes the full waiter orders list correctly.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Slider switches not toggling correctly on some pages.</li>
+                <li>Large label text breaking layouts by truncating with ellipsis and showing the full value on hover.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.6" data-version="3.6">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.6</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.6</span>
+            </div>
+            <p class="changelog-entry-summary">Payments and currency settings expanded while customer import and order layouts received quality-of-life improvements.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Reward points value on invoices.</li>
+                <li>User import feature.</li>
+                <li>Payment note required option in Business Settings &gt; Sales to enforce payment notes.</li>
+                <li>Currencies management on the frontend at `posurl/app/currencies`.</li>
+                <li>New Riyal currency symbol.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Advance balance support in customer import.</li>
+                <li>Advance balance visibility on the customer list page.</li>
+                <li>Miscellaneous UI improvements.</li>
+                <li>Orders page layout for the inbuilt core Orders module.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.5" data-version="3.5">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.5</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.5</span>
+            </div>
+            <p class="changelog-entry-summary">Sales filtering, reporting detail, invoice behavior, and broad calculation fixes across the application.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Payment method filter on the sales list.</li>
+                <li>Assigned to filter on the contact list.</li>
+                <li>Action column on the stock report with links to product stock history.</li>
+                <li>Max discount limit support for fixed discount type on the discount modal.</li>
+                <li>SKU display on invoice product rows in the create screen.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Profit and loss report.</li>
+                <li>Invoice list row click now opens the invoice info modal.</li>
+                <li>POS sales list screen with more columns for detailed visibility.</li>
+                <li>Contact show screen.</li>
+                <li>Invoice datatable reload behavior after delete.</li>
+                <li>Activity log report.</li>
+                <li>Overall UI fixes and improvements.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Add quotation page showing the Add Sales heading.</li>
+                <li>Discount percentage calculation.</li>
+                <li>Timezone issues affecting date filters and sales timestamps.</li>
+                <li>Order discount display on receipts.</li>
+                <li>Login page background rendering.</li>
+                <li>Invoice totals, including tax calculations.</li>
+                <li>Sell return tax calculations for line items.</li>
+                <li>Contacts &gt; Action &gt; Invoices opening the wrong tab.</li>
+                <li>Types of service not saving from the sales create screen.</li>
+                <li>Custom fields across the application.</li>
+                <li>Sell subscription invoice regeneration.</li>
+                <li>Line total tax calculation on POS.</li>
+                <li>Transaction payment edit and delete errors.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Notes</h3>
+              <ul>
+                <li>Other miscellaneous fixes and improvements were included throughout the application.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.4" data-version="3.4">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.4</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.4</span>
+            </div>
+            <p class="changelog-entry-summary">Restaurant management, realtime POS refinements, discount validation, and deeper sales-report accuracy improvements.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Support for the Advance Restaurant Management System module.</li>
+                <li>Improved sleek layout for the POS screen.</li>
+                <li>Combo modifiers for selling combo products.</li>
+                <li>A new product search bar on product stock history.</li>
+                <li>Maximum discount validation for line items and total order discounts.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Product stock history with color codes for quantities.</li>
+                <li>Modifiers and combo modifiers in the product sell report.</li>
+                <li>Modifiers and combo modifiers in the GST sales report.</li>
+                <li>Default ordering in the product sale report by date.</li>
+                <li>Dashboard net sales calculation logic.</li>
+                <li>Running order modal with improved grid, list, and card layouts.</li>
+                <li>Realtime POS logic and feature toggling behavior.</li>
+                <li>Modifiers and combo modifiers in legacy POS product rows.</li>
+                <li>Product summary on the cash register modal.</li>
+                <li>Expense note on the expense list screen.</li>
+                <li>Dashboard chart dates now support language localization.</li>
+                <li>Dashboard charts now support RTL for Arabic.</li>
+                <li>Cash register report close icon.</li>
+                <li>POS edit screen support for realtime POS.</li>
+                <li>Legacy product row and combo modifier layout aligned with realtime POS.</li>
+                <li>Delivery note action on sell and POS lists.</li>
+                <li>Saudi Arabia's new currency symbol.</li>
+                <li>Customer display support for modifiers and combo modifiers.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Tax calculation rounding on the POS screen.</li>
+                <li>Login background image now covers the full screen.</li>
+                <li>Subtotal handling for modifiers and combo modifiers on invoices and in the database.</li>
+                <li>All product sales reports now accurately include modifiers, combo items, and related modifiers.</li>
+                <li>Sale representative report payment status modal not opening on click.</li>
+                <li>Dashboard chart end-of-month dates and months.</li>
+                <li>POS edit screen layout to match the create screen.</li>
+                <li>Quick product add bypassing user and subscription quota checks.</li>
+                <li>Package quota restriction in the new users modal.</li>
+                <li>Package quota restriction in the quick add products modal.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.3" data-version="3.3">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.3</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.3</span>
+            </div>
+            <p class="changelog-entry-summary">Realtime POS data controls, stronger verification flows, reporting fixes, and broad theme improvements.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Real-time barcode scanning and product suggestions on the POS screen.</li>
+                <li>Settings to enable, disable, and configure real-time product data syncing.</li>
+                <li>Email verification via OTP instead of verification links.</li>
+                <li>Enable Instant POS on both business and POS screen levels.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Added Maldivian Rufiyaa (MVR) currency support.</li>
+                <li>Improved layout and usability of the documents and notes section.</li>
+                <li>Enhanced dark mode for better consistency and readability.</li>
+                <li>Refreshed overall application theme with a cleaner design.</li>
+                <li>Added a Google Map contact section.</li>
+                <li>Added a dedicated bulk price update page for faster product pricing management.</li>
+                <li>Added opening and closing stock details to the profit and loss report.</li>
+                <li>Streamlined logo placement and sizing across the application.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Profit by Invoice report failing to load.</li>
+                <li>Profit by Date report not loading because of data filtering errors.</li>
+                <li>reCAPTCHA now requires both site and secret keys when enabled to avoid accidental system lockout.</li>
+                <li>Invoice scheme numbering now starts from 1 by default; zero is no longer allowed.</li>
+                <li>Date and time filters in the product sell report when grouped by category or brand.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.1" data-version="3.1">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.1</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">3.1</span>
+            </div>
+            <p class="changelog-entry-summary">Authentication and login controls expanded while the customer display and general UI received a refresh.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Two-factor authentication (2FA).</li>
+                <li>Background image for the login page.</li>
+                <li>Language settings for the header.</li>
+                <li>Social logins.</li>
+                <li>Brute force protection.</li>
+                <li>Maintenance mode.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Customer display screen redesigned with real-time updates and advertisement support.</li>
+                <li>Overall UI improvements.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.0.1" data-version="3.0.1">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.0.1</p>
+                <h2>Maintenance release</h2>
+              </div>
+              <span class="changelog-badge">3.0.1</span>
+            </div>
+            <p class="changelog-entry-summary">A compact follow-up release focused on RTL, dark mode, language support, and quotation conversion.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Swahili language support.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>RTL mode.</li>
+                <li>Dark mode.</li>
+                <li>Overall design and layout.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Quotation not showing when converted to proforma.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-3.0" data-version="3.0">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 3.0</p>
+                <h2>Major release</h2>
+              </div>
+              <span class="changelog-badge">3.0</span>
+            </div>
+            <p class="changelog-entry-summary">A visual and usability refresh with new theme controls, homepage improvements, and invoice workflow fixes.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Color scheme changer.</li>
+                <li>Login page background image.</li>
+                <li>Purchase sell mismatch fix utility.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Tax rates added to the profile settings dropdown.</li>
+                <li>Custom date range handling in the date range picker.</li>
+                <li>Homepage layout with a financial year sales chart and additional widgets.</li>
+                <li>Input form fields and select option layouts.</li>
+                <li>Add and edit invoice layout alignment.</li>
+                <li>Datatable button styling.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Letterhead not saving.</li>
+                <li>Date issue in Add Sell.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Notes</h3>
+              <ul>
+                <li>Miscellaneous fixes and improvements were included throughout the application.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.8.5" data-version="2.8.5">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.8.5</p>
+                <h2>Previous release</h2>
+              </div>
+              <span class="changelog-badge">2.8.5</span>
+            </div>
+            <p class="changelog-entry-summary">Security hardening, invoice fixes, and QR-related corrections.</p>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Security improvements and general enhancements.</li>
+                <li>Minor fixes and small workflow improvements.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Product stock history display.</li>
+                <li>Customer display visibility when show price check screen is disabled in settings.</li>
+                <li>RTL issues on the login page.</li>
+                <li>Show invoice via URL flow.</li>
+                <li>Invoice create error 500.</li>
+                <li>QR printing for the ZATCA module.</li>
+                <li>RTL issues when downloading invoice PDFs.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.8" data-version="2.8">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.8</p>
+                <h2>Earlier release</h2>
+              </div>
+              <span class="changelog-badge">2.8</span>
+            </div>
+            <p class="changelog-entry-summary">Detailed notes for this version are not available.</p>
+          </article>
+          <article class="changelog-entry" id="v-2.6" data-version="2.6">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.6</p>
+                <h2>Earlier release</h2>
+              </div>
+              <span class="changelog-badge">2.6</span>
+            </div>
+            <p class="changelog-entry-summary">Detailed notes for this version are not available.</p>
+          </article>
+          <article class="changelog-entry" id="v-2.5.6" data-version="2.5.6">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.5.6</p>
+                <h2>Maintenance release</h2>
+              </div>
+              <span class="changelog-badge">2.5.6</span>
+            </div>
+            <p class="changelog-entry-summary">A focused fix release around rewards, COGS, POS behavior, and invoice layout alignment.</p>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Redeem points values above 1,000 not saving correctly.</li>
+                <li>Contact table column alignment when reward points are enabled.</li>
+                <li>COGS formula corrected to opening stock plus purchases minus closing stock.</li>
+                <li>Selling price group selection on POS now updates correctly when no price group is assigned after customer selection.</li>
+                <li>Running restaurant orders now print KOT from show-invoice and print-invoice paths instead of printing an invoice.</li>
+                <li>Footer totals alignment in the invoice list table.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.5" data-version="2.5">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.5</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">2.5</span>
+            </div>
+            <p class="changelog-entry-summary">Expanded POS visibility, better customer display detail, and performance work across the POS flow.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>COGS in the profit and loss report.</li>
+                <li>Remaining product stock display on the POS screen.</li>
+                <li>Product image display on the POS screen.</li>
+                <li>Repair module data header on the login page.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Customer display now shows more order details, including totals, order tax, and modifiers.</li>
+                <li>Product add speed on the POS screen.</li>
+                <li>POS screen load time.</li>
+                <li>Profit and loss reporting.</li>
+                <li>POS screen layout.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>App update version not changing correctly.</li>
+                <li>Edit and update flow for modifiers.</li>
+                <li>Dark mode layout issues.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.4" data-version="2.4">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.4</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">2.4</span>
+            </div>
+            <p class="changelog-entry-summary">Login protection, restaurant defaults, and a round of product, user, and POS fixes.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Google reCAPTCHA protection on the login screen.</li>
+                <li>Enhanced footer in the main application.</li>
+                <li>Light logo in the main sidebar for dark mode.</li>
+                <li>Default order type selection in business settings for restaurant workflows.</li>
+                <li>Optional required order type setting in business settings for restaurant workflows.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Variation handling on the product screen.</li>
+                <li>Additional fields in the create and edit user modal.</li>
+                <li>Business name fallback in the contact payment modal.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Edit button on the user edit screen.</li>
+                <li>Variation flow on the product screen.</li>
+                <li>Dark mode layout issues.</li>
+                <li>TODO button behavior on quick links.</li>
+                <li>Item discount calculation on POS.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.2" data-version="2.2">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.2</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">2.2</span>
+            </div>
+            <p class="changelog-entry-summary">Restaurant printing, product labeling, printer settings, and a broad UI polish pass.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Print KOT option from the restaurant screen details button.</li>
+                <li>Order status on running orders.</li>
+                <li>Kitchen screen now receives only running orders.</li>
+                <li>Custom labels on the product page.</li>
+                <li>Print label action on products.</li>
+                <li>Barcode settings in Settings &gt; Barcodes.</li>
+                <li>POS printer settings in Settings &gt; Printers.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Menu scrollbar redesigned into a thin clickable scrollbar.</li>
+                <li>Main header menus opening and closing behavior.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Sidebar reports.</li>
+                <li>Dark mode button behavior in the mobile layout.</li>
+                <li>Fetching combo products.</li>
+                <li>Menu scroll button behavior on mobile screens.</li>
+                <li>Sending ledger via email.</li>
+                <li>Location on edit product.</li>
+                <li>Action button layout on the tax rates screen.</li>
+                <li>Select control issues across the application.</li>
+                <li>Action button layout across the application.</li>
+                <li>Contact show layout.</li>
+                <li>Edit button layout across the application.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.1" data-version="2.1">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.1</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">2.1</span>
+            </div>
+            <p class="changelog-entry-summary">Restaurant operations became much richer, with running orders, KOT, order types, and mobile POS refinements.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>KOT (Kitchen Order Ticket).</li>
+                <li>Order type selection on the POS page for dine-in, takeaway, and delivery.</li>
+                <li>Visibility and management for combo product modifiers on the POS page.</li>
+                <li>Combo modifiers on the product page.</li>
+                <li>Running order modal with real-time updates, edit and modify options, KOT reprint, and pre-bill printing.</li>
+                <li>Order notes before placing an order, reflected on KOT, invoice, and running orders.</li>
+                <li>Expanded POS header dropdown with additional options.</li>
+                <li>Restaurant settings to enable or disable order type, KOT, and running orders.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Dark theme control on mobile moved into a dropdown button.</li>
+                <li>Repair attendance calendar todo in the main app header.</li>
+                <li>Header logo removed on mobile screens.</li>
+                <li>POS mobile layout updated to feel more like a mobile application.</li>
+                <li>POS mobile layout set to fixed for better UX.</li>
+                <li>Categories and brands layout improved for faster selection.</li>
+                <li>Featured products layout.</li>
+                <li>New mobile check library.</li>
+                <li>Overall code improvements and optimizations.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Invoice layout add button.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-2.0" data-version="2.0">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 2.0</p>
+                <h2>Feature release</h2>
+              </div>
+              <span class="changelog-badge">2.0</span>
+            </div>
+            <p class="changelog-entry-summary">Major POS utility additions, invoice schemes, and screen-fit improvements.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Excel download for all products.</li>
+                <li>Sell return on the POS screen.</li>
+                <li>Expense entry on the POS screen.</li>
+                <li>Calculator on the POS screen with keyboard input.</li>
+                <li>Invoice schemes.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Updated</h3>
+              <ul>
+                <li>Product add and edit screen.</li>
+                <li>Overall POS screen layout.</li>
+                <li>POS screen layout to better fit the available screen space.</li>
+                <li>POS screen product list.</li>
+                <li>Currency exchange rate handling on the POS screen.</li>
+                <li>Default data table entry behavior.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Dashboard graph real-time update issue.</li>
+                <li>Auto email notification sending issue.</li>
+                <li>Data tables now show all entries correctly.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-1.5" data-version="1.5">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 1.5</p>
+                <h2>Earlier release</h2>
+              </div>
+              <span class="changelog-badge">1.5</span>
+            </div>
+            <p class="changelog-entry-summary">Home screen expansion, reward points, invoice improvements, and a set of stability fixes.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>New widgets on the home screen.</li>
+                <li>Sales order support.</li>
+                <li>Reward points.</li>
+                <li>Settings interface improvements.</li>
+                <li>Invoice preview email sending improvements.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Media upload issue.</li>
+                <li>Invoice edit issue affecting some users.</li>
+                <li>Minor language issues.</li>
+                <li>Invoice delete issues.</li>
+              </ul>
+            </section>
+          </article>
+          <article class="changelog-entry" id="v-1.4" data-version="1.4">
+            <div class="changelog-entry-head">
+              <div>
+                <p class="eyebrow">Version 1.4</p>
+                <h2>Earlier release</h2>
+              </div>
+              <span class="changelog-badge">1.4</span>
+            </div>
+            <p class="changelog-entry-summary">Multi-currency support and a small bundle of account and misc fixes.</p>
+            <section class="changelog-group">
+              <h3>Added</h3>
+              <ul>
+                <li>Support for the multi-currency module.</li>
+              </ul>
+            </section>
+            <section class="changelog-group">
+              <h3>Fixed</h3>
+              <ul>
+                <li>Account issue.</li>
+                <li>Miscellaneous fixes.</li>
+              </ul>
+            </section>
+          </article>
+        </div>
       </section>
 
       <section class="cta-band section-shell" id="contact">
@@ -165,7 +919,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=3"></script>
     <script type="module" src="changelog.js"></script>
   </body>
 </html>
