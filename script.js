@@ -112,7 +112,7 @@ if (pricingSection) {
   const note = pricingSection.querySelector(".pricing-note");
   const noteText = pricingSection.querySelector("[data-pricing-note-text]");
   const pricingToggles = [...pricingSection.querySelectorAll("[data-pricing-toggle]")];
-  const cycles = { monthly: "/ month", yearly: "/ year" };
+  const cycles = { monthly: "/month", yearly: "/year" };
 
   const setBilling = (billing) => {
     cards.forEach((card) => {
